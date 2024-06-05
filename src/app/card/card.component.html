@@ -1,18 +1,23 @@
-<div class="card">
+<div class="cont">
+  <div class="card">
     <div class="image">
       <img src="../../assets/images/product-1.jpg" alt="" />
     </div>
     <div class="prod-name">
-      <p>{{data.title}}</p>
+      <p>{{ data.title }}</p>
     </div>
     <div class="prod-disc">
       <p>Battery life 50H noise cancelation</p>
     </div>
     <div class="prod-price">
-      <p>{{data.id + '0' + ' $'}}</p>
+      <p>{{ data.id + "0" + " $" }}</p>
     </div>
     <div class="buy-btn">
       <button>Buy now</button>
     </div>
   </div>
-  
+</div>
+<div class="data">
+<input type="text" [(ngModel)]="text" />
+<p>{{ text }}</p>
+</div>

@@ -3,6 +3,11 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 } */
 
+.cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
 .card {
   border: 1px black solid;
   padding: 5px;
@@ -96,4 +101,16 @@
 
 .card .buy-btn button:hover::before {
   width: 100%;
+}
+
+.data {
+  text-align: center;
+}
+
+.data p {
+  background-color: black;
+  color: white;
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 50px;
 }
