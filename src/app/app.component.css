@@ -1,0 +1,8 @@
+app-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+h1 {
+  text-transform: uppercase;
+}

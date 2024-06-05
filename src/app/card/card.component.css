@@ -1,0 +1,99 @@
+/* .cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+} */
+
+.card {
+  border: 1px black solid;
+  padding: 5px;
+  margin: 10px;
+  transition-duration: 1s;
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 10px 10px 15px rgb(25, 25, 25);
+}
+
+.card .image {
+  width: 80%;
+  padding: 5px;
+  margin: auto;
+}
+
+.card .image img {
+  width: 100%;
+}
+
+.card .prod-name {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+.card .prod-disc {
+  text-wrap: wrap;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.card .rate {
+  text-align: center;
+}
+
+.card .rate fa-icon {
+  padding: 0 5px;
+  color: goldenrod;
+}
+
+.card .rate fa-icon:last-child {
+  color: black;
+}
+
+.card .prod-price {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.card .buy-btn {
+  text-align: center;
+  padding: 5px;
+}
+
+.card .buy-btn button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 20px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.card .buy-btn button::before {
+  content: "";
+  background-color: goldenrod;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  z-index: -1;
+  transition: 1s all ease;
+}
+
+.card .buy-btn button:hover::before {
+  width: 100%;
+}
