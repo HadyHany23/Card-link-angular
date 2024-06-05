@@ -105,12 +105,25 @@
 
 .data {
   text-align: center;
+  margin-top: 50px;
+}
+
+.data input {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border-color: red;
+  outline-color: red;
+  font-size: 20px;
 }
 
 .data p {
   background-color: black;
   color: white;
-  width: 50%;
+  width: fit-content;
+  overflow: hidden;
+  max-width: 80%;
   margin: 20px auto;
   border-radius: 50px;
+  font-size: 30px;
+  padding: 10px 20px;
 }
