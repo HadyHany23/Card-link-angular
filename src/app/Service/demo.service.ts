@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class DemoService {
-  private link = 'https://jsonplaceholder.typicode.com/users';
+  private link = 'https://jsonplaceholder.typicode.com/photos';
   constructor(private http: HttpClient) {}
-  getall(){
-    return this.http.get(this.link)
+  getall() {
+    return this.http.get(this.link);
   }
 }

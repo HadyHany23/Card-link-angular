@@ -1,23 +1,20 @@
-@for (prod of data; track $index) {
-<div class="cont">
-  <div class="card">
-    <div class="image">
-      <img src="../../assets/images/product-1.jpg" alt="" />
-    </div>
-    <div class="prod-name">
-      <p>{{ prod.username }}</p>
-    </div>
-    <div class="prod-disc">
-      <p>{{ prod.email }}</p>
-    </div>
-    <div class="prod-price">
-      <p>{{ prod.id }}</p>
-    </div>
-    <div class="buy-btn">
-      <button>Buy now</button>
+<div class="row">
+  @for (prod of data; track $index) {
+  <div class="col-4">
+    <div class="card">
+      <div class="image">
+        <img src={{prod.url}} alt="" />
+      </div>
+      <div class="prod-name">
+        <p>{{ prod.title }}</p>
+      </div>
+      <div class="prod-price">
+        <p>{{ prod.id + "$" }}</p>
+      </div>
+      <div class="buy-btn">
+        <button>Buy now</button>
+      </div>
     </div>
   </div>
+  }
 </div>
-}
-
-
