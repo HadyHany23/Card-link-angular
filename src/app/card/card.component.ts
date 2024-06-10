@@ -1,30 +1,29 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DemoService } from '../Service/demo.service';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [HttpClientModule,FormsModule,CommonModule],
+  imports: [HttpClientModule, FormsModule, CommonModule],
   templateUrl: './card.component.html',
+  providers: [DemoService],
   styleUrl: './card.component.css',
 })
 export class CardComponent implements OnInit {
   public data: any;
-  text='';
-  constructor(private http: HttpClient) {}
+  text = '';
+  constructor(private service: DemoService) {}
 
-  public fetchName() {
-    this.http
-      .get('https://jsonplaceholder.typicode.com/todos/1')
-      .subscribe((resp: any) => {
-        console.log(resp);
-        this.data = resp;
-      });
+  public fetchData() {
+    this.service.getall().subscribe((resp: any) => {
+      this.data = resp;
+    });
   }
 
   ngOnInit(): void {
-    this.fetchName();
+    this.fetchData();
   }
 }
